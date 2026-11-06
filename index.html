@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2e9">
+  <meta name="description" content="Siesta Lab 是一个位于中国、专注于大语言模型与决策模型的研究团队。Siesta Lab is a research team based in China, working on large language models and decision models.">
+  <meta property="og:title" content="Siesta Lab">
+  <meta property="og:description" content="大语言模型与决策模型研究。Research on large language models and decision models. Meet Eason Guo, Harvin Wang, Vincent, and Bob Siesta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://siestalab.github.io/">
+  <link rel="canonical" href="https://siestalab.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Siesta Lab</title>
+  <style>
+    :root{--paper:#f4f2e9;--ink:#183c30;--muted:#5b6a5c;--line:#c7cdbf;--sun:#e6b64b;--white:#faf9f3;--curve:cubic-bezier(.22,1,.36,1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.7}a{color:inherit;text-underline-offset:5px}button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:6px}::selection{background:var(--sun);color:var(--ink)}
+    .wrap{max-width:1440px;margin:auto;padding:0 64px}.skip{position:absolute;top:-100px;left:24px;background:var(--ink);color:var(--paper);padding:8px 16px;z-index:10}.skip:focus{top:16px}.header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 0;border-bottom:1px solid var(--line)}.brand{display:inline-flex;align-items:center;gap:12px;font-weight:600;text-decoration:none;font-size:20px;letter-spacing:-.5px}.brand-mark{display:inline-block;width:24px;height:24px;border-radius:50%;background:var(--ink);position:relative;overflow:hidden}.brand-mark:after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:var(--sun)}.nav{display:flex;align-items:center;gap:32px;font-size:14px}.nav a{text-decoration:none}.nav a:hover{text-decoration:underline}.language{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:24px}.language button{border:0;background:transparent;color:var(--muted);font-size:12px;cursor:pointer;padding:5px 10px;border-radius:20px;transition:background .3s var(--curve),color .3s var(--curve)}.language button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+    .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}.hero{padding-top:64px}.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px}.location{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;letter-spacing:.08em}.dot{width:6px;height:6px;background:var(--ink);border-radius:50%}.hero h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(84px,13.1vw,184px);font-weight:400;letter-spacing:-.065em;line-height:1.05;margin:32px 0 40px}.hero-bottom{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:end;margin-bottom:64px}.hero-intro{font-size:24px;line-height:1.5;max-width:520px;margin:0;text-wrap:balance}.hero-note{max-width:360px;margin:0;color:var(--muted);font-size:14px}.landscape{height:256px;position:relative;overflow:hidden;background:#e4e7da;border-radius:2px}.sun{width:144px;height:144px;border-radius:50%;background:var(--sun);position:absolute;left:50%;bottom:62px;transform:translateX(-50%)}.horizon{position:absolute;bottom:0;width:100%;height:101px;background:var(--ink)}.horizon:before{content:"";position:absolute;inset:16px 0 auto;border-top:1px solid #819177}.horizon:after{content:"";position:absolute;inset:32px 0 auto;border-top:1px solid #657c64}.landscape-label{position:absolute;bottom:24px;left:32px;color:var(--paper);font-size:11px;letter-spacing:.18em}.landscape-coord{position:absolute;bottom:24px;right:32px;color:var(--paper);font-size:11px;letter-spacing:.1em}
+    .section{display:grid;grid-template-columns:1fr 2fr;gap:64px;padding:80px 0;border-bottom:1px solid var(--line)}.section-label{display:flex;align-items:baseline;gap:24px;font-size:12px;letter-spacing:.08em}.section-number{color:var(--muted)}.section h2{font-size:36px;font-weight:400;line-height:1.5;letter-spacing:-.03em;max-width:640px;margin:0 0 24px;text-wrap:balance}.section p{color:var(--muted);max-width:540px;margin:0;font-size:16px}.facts{display:flex;gap:80px;margin-top:40px}.fact-label{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}.fact-value{font-size:14px}.member{display:flex;align-items:center;justify-content:space-between;gap:32px;padding:0 0 32px}.member-name{font-family:Georgia,"Times New Roman",serif;font-size:40px;line-height:1.3;margin:0 0 12px;font-weight:400;letter-spacing:-1px}.member-role{font-size:14px;color:var(--muted)}.member-link{display:inline-flex;align-items:center;gap:16px;font-size:14px;text-decoration:none;border-bottom:1px solid var(--ink);padding:8px 0;white-space:nowrap;transition:opacity .3s var(--curve)}.member-link:hover{opacity:.65}.member-link:active{transform:translateY(1px)}.member-dates{display:block;font-size:12px;color:var(--muted);margin-top:12px}.member-note{font-size:13px!important;max-width:480px!important}.footer{padding:32px 0 48px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:12px}.footer-name{color:var(--ink);font-size:16px;letter-spacing:-.5px}.footer-right{display:flex;gap:32px}.footer a{text-decoration:none}.footer a:hover{text-decoration:underline}
+    @media(min-width:1600px){.hero h1{font-size:184px}}@media(max-width:900px){.wrap{padding:0 32px}.hero-bottom{gap:32px}.section{grid-template-columns:1fr 2fr;gap:32px}.hero h1{font-size:clamp(72px,14vw,140px)}.hero-intro{font-size:20px}.section h2{font-size:30px}.member{align-items:flex-start;flex-direction:column;gap:16px}.facts{gap:48px}}@media(max-width:600px){.wrap{padding:0 24px}.header{padding:24px 0;gap:12px}.brand{font-size:18px}.nav{gap:16px}.nav>a{display:none}.hero{padding-top:40px}.hero h1{font-size:clamp(70px,17vw,100px);margin:24px 0 32px;letter-spacing:-.065em}.hero-top .eyebrow{font-size:10px}.location{font-size:10px}.hero-bottom{grid-template-columns:1fr;gap:24px;margin-bottom:40px}.hero-intro{font-size:24px;max-width:320px}.hero-note{font-size:14px;max-width:320px}.landscape{height:200px}.sun{width:120px;height:120px;bottom:52px}.horizon{height:80px}.landscape-label{left:20px;bottom:24px}.landscape-coord{right:20px;bottom:24px}.section{grid-template-columns:1fr;gap:32px;padding:48px 0}.section h2{font-size:28px;margin-bottom:16px}.section p{font-size:14px}.facts{margin-top:32px;gap:64px}.member-name{font-size:36px}.member{padding-bottom:24px}.footer{align-items:flex-start;padding:24px 0 32px}.footer-right{flex-direction:column;align-items:flex-end;gap:8px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+    .member + .member{padding-top:32px;border-top:1px solid var(--line)}.member:last-child{padding-bottom:0}.member-links{display:flex;flex-wrap:wrap;gap:24px}.facts{flex-wrap:wrap;row-gap:20px}.facts dd{margin:0}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" data-zh="跳至正文" data-en="Skip to content">跳至正文</a>
+  <div class="wrap">
+    <header class="header">
+      <a class="brand" href="#main" aria-label="Siesta Lab"><span class="brand-mark" aria-hidden="true"></span>Siesta Lab</a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about" data-zh="关于" data-en="About">关于</a>
+        <a href="#people" data-zh="成员" data-en="People">成员</a>
+        <div class="language" role="group" aria-label="Language / 语言"><button type="button" data-lang="zh" aria-pressed="true" lang="zh-CN">中文</button><button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button></div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-top"><span class="eyebrow">Research team</span><span class="location"><span class="dot" aria-hidden="true"></span><span data-zh="中国 / CHINA" data-en="BASED IN CHINA">中国 / CHINA</span></span></div>
+        <h1 id="hero-title">Siesta Lab</h1>
+        <div class="hero-bottom">
+          <p class="hero-intro" data-zh="大语言模型。\n决策模型。" data-en="Large language models.\nDecision models.">大语言模型。<br>决策模型。</p>
+          <p class="hero-note" data-zh="Siesta Lab 是一个位于中国、专注于大语言模型与决策模型的研究团队。" data-en="Siesta Lab is a research team based in China, working on large language models and decision models.">Siesta Lab 是一个位于中国、专注于大语言模型与决策模型的研究团队。</p>
+        </div>
+        <div class="landscape" aria-hidden="true"><div class="sun"></div><div class="horizon"></div><span class="landscape-label">A MOMENT TO THINK.</span><span class="landscape-coord">SIESTA / LAB</span></div>
+      </section>
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-label"><span class="section-number">01</span><span data-zh="关于我们" data-en="ABOUT THE LAB">关于我们</span></div>
+        <div><h2 id="about-title" data-zh="共同探索，\n理解与决策。" data-en="Exploring understanding\nand decision making.">共同探索，<br>理解与决策。</h2><p data-zh="Siesta Lab 是一个位于中国的研究团队，研究方向包括大语言模型与决策模型。我们围绕这些方向交流研究问题、方法与进展。" data-en="Siesta Lab is a research team based in China. Our research focuses on large language models and decision models. We exchange research questions, methods, and progress in these areas.">Siesta Lab 是一个位于中国的研究团队，研究方向包括大语言模型与决策模型。我们围绕这些方向交流研究问题、方法与进展。</p><dl class="facts"><div><dt class="fact-label" data-zh="机构名称" data-en="Institution name">机构名称</dt><dd class="fact-value">Siesta Lab</dd></div><div><dt class="fact-label" data-zh="机构类型" data-en="Type">机构类型</dt><dd class="fact-value" data-zh="研究团队" data-en="Research team">研究团队</dd></div><div><dt class="fact-label" data-zh="所在地" data-en="Location">所在地</dt><dd class="fact-value" data-zh="中国" data-en="China">中国</dd></div></dl></div>
+      </section>
+      <section class="section" id="people" aria-labelledby="people-title">
+        <div class="section-label"><span class="section-number">02</span><span id="people-title" data-zh="研究成员" data-en="PEOPLE">研究成员</span></div>
+        <div>
+          <article class="member"><div><h3 class="member-name">Eason Guo</h3><span class="member-role" data-zh="研究员 · Siesta Lab" data-en="Researcher · Siesta Lab">研究员 · Siesta Lab</span><span class="member-dates" data-zh="2026 年 5 月 — 至今" data-en="May 2026 — Present">2026 年 5 月 — 至今</span></div><div class="member-links"><a class="member-link" href="people/eason-guo.html"><span data-zh="个人主页" data-en="Personal profile">个人主页</span><span aria-hidden="true">↗</span></a><a class="member-link" href="https://openreview.net/profile?id=~Yichen_Guo3" target="_blank" rel="noopener noreferrer" aria-label="Eason Guo on OpenReview">OpenReview <span aria-hidden="true">↗</span></a></div></article>
+          <article class="member"><div><h3 class="member-name">Harvin Wang</h3><span class="member-role" data-zh="研究员 · Siesta Lab" data-en="Researcher · Siesta Lab">研究员 · Siesta Lab</span></div><a class="member-link" href="people/harvin-wang.html"><span data-zh="个人主页" data-en="Personal profile">个人主页</span><span aria-hidden="true">↗</span></a></article>
+          <article class="member"><div><h3 class="member-name">Vincent</h3><span class="member-role" data-zh="研究员 · Siesta Lab" data-en="Researcher · Siesta Lab">研究员 · Siesta Lab</span><span class="member-dates" data-zh="2026 年 — 至今" data-en="2026 — Present">2026 年 — 至今</span></div><a class="member-link" href="people/vincent.html"><span data-zh="个人主页" data-en="Personal profile">个人主页</span><span aria-hidden="true">↗</span></a></article>
+          <article class="member"><div><h3 class="member-name">Bob Siesta</h3><span class="member-role" data-zh="研究员 · Siesta Lab" data-en="Researcher · Siesta Lab">研究员 · Siesta Lab</span><span class="member-dates" data-zh="2026 年 — 至今" data-en="2026 — Present">2026 年 — 至今</span></div><a class="member-link" href="people/bob.html"><span data-zh="个人主页" data-en="Personal profile">个人主页</span><span aria-hidden="true">↗</span></a></article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span class="footer-name">Siesta Lab</span><div class="footer-right"><span data-zh="研究团队 · 中国" data-en="Research team · China">研究团队 · 中国</span><a href="#main" data-zh="返回顶部 ↑" data-en="Back to top ↑">返回顶部 ↑</a></div></footer>
+  </div>
+  <script>
+    const buttons = document.querySelectorAll('[data-lang]');
+    function setLanguage(language) {
+      const english = language === 'en';
+      document.documentElement.lang = english ? 'en' : 'zh-CN';
+      document.title = 'Siesta Lab';
+      document.querySelector('nav').setAttribute('aria-label', english ? 'Main navigation' : '主导航');
+      document.querySelectorAll('[data-zh][data-en]').forEach(element => {
+        const lines = element.getAttribute(english ? 'data-en' : 'data-zh').split('\\n');
+        element.replaceChildren();
+        lines.forEach((line, index) => {
+          if (index) element.append(document.createElement('br'));
+          element.append(document.createTextNode(line));
+        });
+      });
+      buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === language)));
+    }
+    buttons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+  </script>
+</body>
+</html>
